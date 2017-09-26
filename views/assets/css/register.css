@@ -1,0 +1,11 @@
+.form-group{
+    margin-bottom: 30px;
+}
+
+label{
+    font-weight: normal;
+}
+
+.cropper-container{
+    width: 100% !important;
+}

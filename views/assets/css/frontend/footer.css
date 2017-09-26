@@ -1,0 +1,32 @@
+footer{
+	background: #222222;
+	margin-top: 30px;
+	color: #fff;
+}
+.logo-footer img{
+	width: 100%;
+}
+.contact-footer, .follow{
+	padding: 30px 10px 15px 10px;
+	text-transform: uppercase;
+}
+.contact-footer p{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.contact-footer p:last-child{
+	padding-top: 10px;
+}
+.title{
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.contact-footer a{
+	color: #2196f3;
+}
+.contact-footer a:hover{
+	color:#0960a5;
+}
+.follow img{
+	width: auto;
+}

@@ -1,0 +1,51 @@
+RewriteEngine on
+
+RewriteRule ^$ index.php?controller=Index&action=show_frontend
+RewriteRule ^admin$ index.php?controller=Index&action=show_backend
+
+##
+#Rewrite url for admin link
+#
+RewriteRule ^admin/edit-menu$ index.php?controller=Menu&action=edit
+RewriteRule ^admin/edit-user/([0-9]+)$ index.php?controller=User&action=edit&user_id=$1
+RewriteRule ^admin/setting/post-type$ index.php?controller=Setting&action=postType
+RewriteRule ^admin/setting/index-option$ index.php?controller=Setting&action=indexOption
+
+RewriteRule ^admin/post/([-0-9a-zA-Z]+)/list$ index.php?controller=Post&action=listInAdmin&post_type=$1&%{QUERY_STRING} [NC,L]
+RewriteRule ^admin/post/([-0-9a-zA-Z]+)/add-new$ index.php?controller=Post&action=addNew&post_type=$1
+RewriteRule ^admin/post/([-0-9a-zA-Z]+)/edit/([0-9]+)$ index.php?controller=Post&action=editPost&post_type=$1&post_id=$2
+RewriteRule ^admin/post/([-0-9a-zA-Z]+)/edit-category$ index.php?controller=Post&action=editCategory&post_type=$1
+
+RewriteRule ^admin/print-curcuit/list$ index.php?controller=PrintCurcuit&action=listInAdmin&%{QUERY_STRING} [NC,L]
+RewriteRule ^admin/print-curcuit/properties$ index.php?controller=PrintCurcuit&action=properties
+RewriteRule ^admin/print-curcuit/add-new$ index.php?controller=PrintCurcuit&action=addNew
+RewriteRule ^admin/print-curcuit/edit/([0-9]+)$ index.php?controller=PrintCurcuit&action=edit&print_curcuit_id=$1
+
+RewriteRule ^admin/order/list$ index.php?controller=Order&action=listInAdmin&%{QUERY_STRING} [NC,L]
+RewriteRule ^admin/order/add-new$ index.php?controller=Order&action=addNew
+RewriteRule ^admin/order/edit/([0-9]+)$ index.php?controller=Order&action=edit&order_id=$1
+
+RewriteRule ^admin/user/list$ index.php?controller=User&action=listInAdmin&%{QUERY_STRING} [NC,L]
+RewriteRule ^admin/user/add-new$ index.php?controller=User&action=addNew
+RewriteRule ^admin/user/edit/([0-9]+)$ index.php?controller=User&action=edit&user_id=$1
+
+RewriteRule ^dang-nhap/header/([^/]+)$ index.php?controller=User&action=login&header=$1 [L]
+RewriteRule ^dang-xuat/header/([^/]+)$ index.php?controller=User&action=logout&header=$1 [L]
+RewriteRule ^dang-xuat$ index.php?controller=User&action=logout&header= [L]
+RewriteRule ^dang-ky/header/([^/]+)$ index.php?controller=User&action=register&header=$1 [L]
+
+##
+#Login
+#
+RewriteRule ^login-with-facebook index.php?controller=User&action=loginWithFacebook&%{QUERY_STRING} [NC,L]
+
+##
+#Test Api
+#
+RewriteRule ^api/([a-zA-Z]+)/([0-9]+)$ index.php?controller=Api&action=$1&id=$2 [L]
+
+RewriteRule ^post/([a-zA-z0-9-]+)$ index.php?controller=Post&action=listInFrontEnd&post_type=$1
+RewriteRule ^post/([a-zA-z0-9-]+)/([a-zA-z0-9-]+)$ index.php?controller=Post&action=showPost&post_type=$1&url=$2
+
+RewriteRule ^san-pham/([-%a-zA-z0-9]+)$ shop/product.php?url=$1
+

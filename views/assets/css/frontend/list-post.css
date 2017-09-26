@@ -1,0 +1,158 @@
+.big-news .title{
+	padding: 10px 0;
+	margin-bottom: 0;
+	font-size: 20px;
+	color: #2196f3;
+}
+.seemore{
+    float: right;
+}
+.seemore span{
+	color: #2196f3;
+}
+.main-news{
+	overflow: auto;
+	font-size: 12px;
+	box-shadow: 1px 1px 5px rgba(255, 255, 255, 1.8);
+	padding: 10px 0;
+	border: 1px solid #eee;
+}
+
+.main-news + .main-news{
+	border-top: 0;
+}
+
+.main-news:hover{
+	background: #f5f5f5;
+}
+
+.main-news .header-name{
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+/* tin túc khhác dưới*/
+.dif-news{
+	margin-top: 20px;
+}
+
+.nav-tabs .nav-item{
+	margin-bottom: 0 !important;
+}
+
+.nav-news-dif{
+	background: #2196f3;
+}
+.nav-link.active{
+	border-radius: 0 !important;
+	background: #0075be !important;
+	border: none !important;
+}
+.nav-item a{
+	color: #fff !important;
+	border: none !important;
+}
+
+.dif-news .nav-news-dif > li.active>a, .dif-news .nav-news-dif > li.active>a:focus{
+	border: 1px solid #0078be;
+	border-radius: 0;
+	background: #0075be !important;
+
+}
+.tab-news-df{
+	border: 1px solid #eee;
+	position: relative;
+}
+
+.item-news-df{
+	padding: 15px 15px;
+	max-height: 1000px;
+	overflow: auto;
+	border-bottom: 1px dashed #ddd;
+}
+
+.tab-show-posts > a:last-child .item-news-df{
+	border-bottom: 0;
+}
+
+.img-news-df img{
+	width: 100%;
+}
+.item-news-df:hover{
+	background: #fbfbfb;
+}
+
+.loading-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 45px;
+	background: rgba(255, 255, 255, 0.8);
+	display: none;
+}
+
+.loading-spinner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.loading-spinner:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	border-radius: 50%;
+	border: 2px solid #4285f4;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	-webkit-animation: spinner 0.5s linear infinite;
+	-moz-animation: spinner 0.5s linear infinite;
+	-ms-animation: spinner 0.5s linear infinite;
+	-o-animation: spinner 0.5s linear infinite;
+	animation: spinner 0.5s linear infinite;
+	
+}
+
+@keyframes spinner{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.ajax-pagi-content{
+	font-size: 20px;
+	line-height: 30px;
+}
+.ajax-pagi-content .pagination{
+	text-align: right;
+	display: inline-block;
+	width: 100%;
+}
+
+.pagination [class^="pagi-item-"]{
+	width: 30px;
+	text-align: center;
+	margin: 5px;
+	border: 1px solid #eee;
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.pagination [class^="pagi-item-"]:hover{
+	background: #4285f4;
+}
+
+.pagination [class^="pagi-item-"]:hover i{
+	color: #fff;
+}

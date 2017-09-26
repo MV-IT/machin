@@ -1,0 +1,119 @@
+@media screen and (max-width: 1199px){
+	.logo_and_contact .banel .bazon h4{
+		font-size: 25px;
+	}	
+	.logo_and_contact .banel .contact{
+		font-size: 12px;
+	}
+	.contant .product-highlights .item-pro .name{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 992px){
+	.logo_and_contact .banel .contact{
+		display: none !important;
+	}
+	.contant .product-highlights .item-pro .name{
+		font-size: 10px;
+	}
+	.contant .silde-bar .loged .info-loged h4{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 767px)
+{
+
+	#navbarNav{
+		transition: left 0.5s ease-out;
+		position: fixed;
+		width: 250px;
+		background: #333;
+		height: 100%;
+		left: -300px;
+		top: 0;
+		padding: 0;
+		z-index: 100;
+	}
+
+	#check-menu:checked + .navbar #navbarNav{
+		left: 0;
+	}
+
+	#check-menu:checked + .navbar .btn-menu span:nth-of-type(2){
+		visibility: hidden;
+		opacity: 0;
+	}
+	#check-menu:checked + .navbar .btn-menu span#second{
+		visibility: visible;
+		transform: translateY(-8px) rotate(45deg);
+	}
+
+	#check-menu:checked + .navbar .btn-menu span#first{
+		visibility: visible;
+		transform: translateY(8px) rotate(-45deg);
+	}
+
+	.menu .list-menu{
+		height: 100%;
+		width: 100%;
+		padding: 50px 0px;
+	}
+
+	.menu .list-menu .item-menu > .icon-sub{
+		transform: rotate(0deg);
+	}
+
+	.menu .list-menu .item-menu .icon-sub{
+		border: 1px solid #555;
+		padding: 3px;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+	}
+
+	.menu .list-menu .item-menu{
+		width: 100%;
+		border-bottom:1px solid rgba(255, 255, 255, 0.3);
+	}
+	.menu .list-menu .item-menu:hover{
+		background: #444;
+	}
+
+	.menu .list-menu .sub-list-menu_1, .menu .list-menu .sub-list-menu_n{
+		background: #333;
+		left: 0;
+		top: 0;
+		position: relative;	
+	}
+	.menu .list-menu .sub-list-menu_1 .sub-item-menu_1:hover , .menu .list-menu .sub-item-menu_n:hover{
+		background: #444;
+	}
+	.menu .list-menu .sub-list-menu_1 .sub-item-menu_1:first-child , .menu .list-menu .sub-item-menu_n:first-child{
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+	}
+	.menu .list-menu .sub-list-menu_1 .sub-item-menu_1> a{
+		padding-left: 40px;
+	}
+	.menu .list-menu .sub-item-menu_n > a{
+		padding-left: 60px;
+	}
+	.list-menu ul{
+		width: 100% !important;
+	}
+	.slide{
+		display: none;
+	}
+	.call-of-action .news{
+		padding-right: 15px;
+	}
+	.navbar{
+		overflow-y: auto;
+	}
+}
+@media screen and (min-width: 768px){
+	.item-menu:hover .sub-list-menu_1, .sub-item-menu_1:hover .sub-list-menu_n{
+		display: block;
+	}
+	.news-no-main, .silde-bar{
+		padding-left: 0;
+	}
+}
