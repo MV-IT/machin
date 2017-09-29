@@ -1,0 +1,22 @@
+.content-new{
+	padding: 15px;
+}
+.title-new{
+	font:400 28px/32px Arial;
+}
+.description{
+	font:700 14px/18px arial;
+    color: #444;
+}
+.img-new{
+	margin-bottom: 10px;
+	max-height: 500px;
+
+}
+.sub-title{
+	font-weight: bold;
+	font-size: 15px;
+}
+.part{
+	text-align: justify;
+}

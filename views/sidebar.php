@@ -3,7 +3,7 @@
 						<?php if(strpos($action, 'post')): ?>
 						<div class="col-12 col-content sidebar-item">
 							<div class="header-title">
-								<span><?php echo $post_type_title ?> nổi bật</span>
+								<span><?php echo $post_type_title; ?> nổi bật</span>
 							</div>
 							<div class="like-news-no-main">
 								<?php if(!empty($listRandomPosts) && is_array($listRandomPosts)):
