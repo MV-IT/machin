@@ -47,5 +47,7 @@ RewriteRule ^api/([a-zA-Z]+)/([0-9]+)$ index.php?controller=Api&action=$1&id=$2 
 RewriteRule ^post/([a-zA-z0-9-]+)$ index.php?controller=Post&action=listInFrontEnd&post_type=$1
 RewriteRule ^post/([a-zA-z0-9-]+)/([a-zA-z0-9-]+)$ index.php?controller=Post&action=showPost&post_type=$1&url=$2
 
+RewriteRule ^mach-in/dat-mach$ index.php?controller=PrintCurcuit&action=order
+
 RewriteRule ^san-pham/([-%a-zA-z0-9]+)$ shop/product.php?url=$1
 
