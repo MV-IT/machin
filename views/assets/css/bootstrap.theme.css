@@ -29,6 +29,16 @@ button, input{
 	border-color: #337ab7;
 }
 
+.btn-secondary{
+	border-color: #868e96;
+	color: #868e96;
+}
+
+
+.btn-secondary:hover{
+	background: #868e96;
+	border-color: #868e96;
+}
 
 .btn-info{
 	color: #5bc0de;
@@ -312,6 +322,40 @@ button, input{
 	background: #d9534f;
 }
 
+.radio input[type="radio"]{
+	position: relative;
+}
+
+.radio input[type="radio"]:before{
+	content: '';
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border: 1px solid #5bc0de;
+}
+
+.radio input[type="radio"]:after{
+	content: '';
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 0;
+	transition: 0.5s;
+	background: #5bc0de;
+	position: absolute;
+}
+
+.radio input[type="radio"]:checked:after{
+	width: 8px;
+	height: 8px;
+}
 
 .round{
 	border-radius: 50% !important;
@@ -330,6 +374,12 @@ button, input{
 
 .cursor-not-allowed{
 	cursor: not-allowed !important;
+}
+
+.box-title{
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 18px;
 }
 
 @media screen and (max-width: 767px) {

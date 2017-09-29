@@ -51,6 +51,10 @@
 	<?php if(strpos($action , 'post')): ?>
 	<script src="<?php echo get_web_url() ?>/views/assets/js/frontend/post.js"></script>
 	<?php endif; ?>
+	<?php if($action == 'print-order'): ?>
+		<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/custom-select/custom-select.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_web_url() ?>/views/assets/js/admin/js-for-order.js"></script>
+	<?php endif; ?>
 	<script>
 		jQuery(document).ready(function($){
 			if($('.dropify').length > 0)

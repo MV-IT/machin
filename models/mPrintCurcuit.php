@@ -28,7 +28,7 @@ class mPrintCurcuit extends Database
 		return $this->getNumRows($sql);
 	}
 
-	public function addNew($name = '', $list_chosed, $type = 'Mẫu', $feature_image, $featured){
+	public function addNew($name = '', $list_chosed, $type = 'Mẫu', $feature_image = '', $featured = 0){
 		if(empty($list_chosed) || !is_array($list_chosed))
 			return false;
 
@@ -36,9 +36,12 @@ class mPrintCurcuit extends Database
 			$type = 'Mẫu';
 
 		$url = make_slug($name);
-		if(!is_array($feature_image))
+		if(!is_array($feature_image) && !empty($feature_image)){
 			$featureName = save_file_from_data_url($feature_image, 'print-curcuit');
-		else $featureName = save_file_upload($feature_image, 'print-curcuit');
+		}
+		else if(is_array($feature_image)){
+			$featureName = save_file_upload($feature_image, 'print-curcuit');
+		}
 
 		$featureImageUrl = ($featureName === false || empty($featureName)) ? '/images/print-curcuit/default.png' : '/images/print-curcuit/'.$featureName;
 
@@ -53,7 +56,7 @@ class mPrintCurcuit extends Database
 			return $print_curcuit_id;
 		}
 
-		public function editPrintCurcuit($id, $name, $list_chosed, $type = 'Mẫu', $feature_image, $featured)
+		public function editPrintCurcuit($id, $name, $list_chosed, $type = 'Mẫu', $feature_image = '', $featured = 0)
 		{
 			if(empty($list_chosed) || !is_array($list_chosed))
 				return false;

@@ -30,6 +30,7 @@ if(is_user_facebook_logged_in()){
 	<?php endif; ?>
 
 	<?php if($action == 'print-order'): ?>
+	<link href="<?php echo get_web_url() ?>/views/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/print-order.css">
 	<?php endif; ?>
 
