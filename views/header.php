@@ -29,6 +29,10 @@ if(is_user_facebook_logged_in()){
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/index.css">
 	<?php endif; ?>
 
+	<?php if($action == 'print-order'): ?>
+	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/print-order.css">
+	<?php endif; ?>
+
 	<?php if($action == 'list-post'): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/list-post.css">
 	<?php endif; ?>

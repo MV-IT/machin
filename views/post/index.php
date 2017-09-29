@@ -105,7 +105,7 @@
 									</div>
 									<div class="ajax-pagi-content">
 										<ul class="pagination">
-											<li class="pagi-item-prev cursor-not-allowed" data-page="1" data-cate-slug="<?php echo $category['slug'] ?>" data-cate-id="<?php echo $category['ID'] ?>"><i class="fa fa-angle-left"></i></li>
+											<li class="pagi-item-prev cursor-not-allowed" data-page="0" data-cate-slug="<?php echo $category['slug'] ?>" data-cate-id="<?php echo $category['ID'] ?>"><i class="fa fa-angle-left"></i></li>
 											<li class="pagi-item-next" data-page="2" data-cate-slug="<?php echo $category['slug'] ?>" data-cate-id="<?php echo $category['ID'] ?>"><i class="fa fa-angle-right"></i></li>
 										</ul>
 									</div>

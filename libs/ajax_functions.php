@@ -163,25 +163,36 @@ function ajax_get_post_by_category(){
 
 	require_once('../models/mPost.php');
 	$postModel = new mPost();
-
+	$data = array();
+	$data['html'] = '';
 	$listPosts = $postModel->getPostByCategory($cate_id, ($page - 1) * 4, 4);
-	foreach ($listPosts as $key => $post){ ?>
-	<a href="<?php echo get_post_permalink($post['ID']) ?>">
+	foreach ($listPosts as $key => $post){
+		$data['html'] .= '<a href="'.get_post_permalink($post['ID']).'">
 		<div class="item-news-df">
 			<div class="row">
 				<div class="col-md-5 col-5 img-news-df">
-					<img src="<?php echo get_post_image($post['ID']) ?>" alt="">
+					<img src="'.get_post_image($post['ID']).'" alt="">
 				</div>
 				<div class="col-md-7 col-7 content-news-df" style="padding-left: 0">
-					<h5><?php echo $post['post_title'] ?></h5>
+					<h5>'.$post['post_title'].'</h5>
 					<p>
-						<?php echo max_word($post['post_content']) ?>
+						'.max_word($post['post_content']).'
 					</p>
 				</div>
 			</div>
 		</div>
-	</a>
-	<?php }
+	</a>';
+	}
+	if(($page - 2)*4 >= 0 && count($postModel->getPostByCategory($cate_id, ($page - 2)*4, 4)) > 0)
+		$statusBack = true;
+	else $statusBack = false;
+	if(($page)*4 >= 0 && count($postModel->getPostByCategory($cate_id, ($page)*4, 4)) > 0)
+		$statusNext = true;
+	else $statusNext = false;
+
+	$data['next'] = $statusNext;
+	$data['prev'] = $statusBack;
+	die(json_encode($data));
 }
 
 /*************

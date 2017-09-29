@@ -158,6 +158,13 @@ class cPrintCurcuit
 		$list_properties = $model->listProperties();
 		require_once('views/admin/print-curcuit/properties.php');
 	}
+
+	public function order()
+	{
+		$action = 'print-order';
+		$page_title = 'Đặt mạch in';
+		require_once 'views/print-circuit/order.php';
+	}
 }
 
 ?>

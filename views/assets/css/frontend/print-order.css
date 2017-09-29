@@ -1,0 +1,112 @@
+.content-form{
+	margin-top: 30px;
+	border: 1px solid #eee;
+	padding: 30px 50px;
+}
+.content-form .title{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 400;
+	color: #0c85e6;
+	text-transform: uppercase;
+}
+/* form styles */
+form{
+	width: 800px;;
+	margin: 0 auto;
+}
+form .row {
+  padding: 7px 8px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+
+form label {
+  display: inline-block;
+  width: 120px;
+  padding: 6px 0;
+  color: #464646;
+  vertical-align: top;
+}
+form .req { color: #ca5354; }
+ 
+form .note {
+  font-weight: normal;
+  margin-bottom: 15px;
+  padding: 2px 7px;
+  line-height: 1.33em;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+ 
+form input:focus, form textarea:focus { outline: none; }
+form .txt {
+  color: #898989;
+  display: inline-block;
+  padding: 8px 9px;
+  padding-right: 30px;
+  font-weight: normal;
+  font-family: 'Oxygen', sans-serif;
+  background-position: 110% center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+  transition: all 0.3s linear;
+  border: 1px solid #ccc;
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+}
+ 
+form .txtarea {
+  display: inline-block;
+  padding: 8px 11px;
+  padding-right: 30px;
+  width: 320px;
+  height: 120px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.35em;
+  font-weight: normal;
+  color: #898989;
+  background-color: #f0f0f0;
+  background-image: url('images/checkmark.png');
+  background-position: 110% 4%;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.75);
+  transition: all 0.3s linear;
+}
+form .txt:focus, form  {
+  background-color: #fff;
+  color: #545454;
+}
+ 
+.center{
+	padding: 0px 120px;
+}
+.change-radio{
+	display: inline-block;
+	padding: 5px;
+}
+.change-radio .padding-radio{
+	padding-right: 0px;
+}
+.box-radio{
+	display: inline-block;
+	width: 130px;
+}
+.box-radio-special{
+	width: 200px;
+}
+#submitbtn {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  font-size: 1.3rem;
+  font-family: 'Oxygen', Arial, sans-serif;
+  padding: 10px;
+}
+#submitbtn:hover, #submitbtn:focus {
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+}
+ 
+#submitbtn:active {
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+}

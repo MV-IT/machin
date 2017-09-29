@@ -82,6 +82,10 @@
 	background: #fbfbfb;
 }
 
+.tab-pane > div:nth-of-type(1){
+	min-height: 178px;
+}
+
 .loading-overlay{
 	position: absolute;
 	top: 0;

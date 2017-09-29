@@ -28,7 +28,7 @@ require_once('views/header.php'); ?>
 								$price = get_print_curcuit_price($printCurcuit['ID']);
 							?>
 								<div class="product-item col-6 col-sm-4 col-md-4 col-lg-3">
-									<a href="">
+									<a href="<?php echo get_print_curcuit_permalink($printCurcuit['ID']) ?>">
 										<div class="product-item-content">
 											<div class="pr-img">
 												<img src="<?php echo get_print_curcuit_feature_image($printCurcuit['ID']) ?>" alt="">
