@@ -96,6 +96,38 @@ class cSetting
 
 		require_once('views/admin/index_option.php');
 	}
+
+	public function generalOption()
+	{
+		if(isset($_POST['update_setting'])){
+
+			$listOption['web-phone'] = !empty($_POST['web-phone']) ? $_POST['web-phone'] : '';
+			
+			$listOption['web-email'] = !empty($_POST['web-email']) ? $_POST['web-email'] : '';
+			
+			$listOption['web-youtube_social'] = $_POST['web-youtube_social'];
+			$listOption['web-facebook_social'] = !empty($_POST['web-facebook_social']) ? $_POST['web-facebook_social'] : '';
+			$listOption['web-twitter_social'] = !empty($_POST['web-twitter_social']) ? $_POST['web-twitter_social'] : '';
+			$listOption['web-title'] = !empty($_POST['web-title']) ? $_POST['web-title'] : '';
+			
+			$listOption['web-domain'] = !empty($_POST['web-domain']) ? $_POST['web-domain'] : '';
+			
+			$listOption['web-description'] = !empty($_POST['web-description']) ? $_POST['web-description'] : '';
+			$listOption['web-gmap'] = !empty($_POST['web-gmap']) ? $_POST['web-gmap'] : '';
+
+			$listOption['web-address'] = !empty($_POST['address_1']) ? $_POST['address_1'].'/'.get_country_by_ID($_POST['address_3']).'/'.get_city_by_ID($_POST['address_2']) : '';
+
+			require 'models/mSetting.php';
+			$model = new mSetting();
+			if($model->updateGeneralOption($listOption))
+				header('location: '.current_url());
+		}
+
+		$address = array_address_from_string(get_web_option('web-address'));
+		$action = 'general-setting';
+		$page_title = 'Thông tin chung';
+		require 'views/admin/setting/general.php';
+	}
 }
 
 ?>

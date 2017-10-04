@@ -10,8 +10,10 @@
 }
 .img-new{
 	margin-bottom: 10px;
+}
+.img-new img{
 	max-height: 500px;
-
+	width: 100%;
 }
 .sub-title{
 	font-weight: bold;

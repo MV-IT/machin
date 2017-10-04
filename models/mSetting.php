@@ -57,6 +57,19 @@ class mSetting extends Database
 			}
 		}
 	}
+
+	public function updateGeneralOption($optionValue)
+	{
+		foreach ($optionValue as $key => $option) {
+			if(!empty($option)){
+				if($this->getNumRows("SELECT * FROM options WHERE option_name = '$key'") > 0)
+					$status = $this->update('options', array('option_value' => $option, 'option_name' => $key), "option_name = '$key'") ? true : false;
+				else
+					$status = $this->insert('options', array('option_value' => $option, 'option_name' => $key)) ? true : false;
+			}
+		}
+		return $status;
+	}
 }
 
 ?>

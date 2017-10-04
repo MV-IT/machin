@@ -132,6 +132,14 @@ class cUser
 		require_once('views/user/register.php');
 	}
 
+	public function showProfile()
+	{
+		$showUser = get_user_by_ID(!empty($_GET['id']) ? $_GET['id'] : get_current_user_info()->ID);
+		$action = 'user-profile';
+		$page_title = 'Trang cá nhân của '.$showUser->display_name;
+		require 'views/user/profile.php';
+	}
+
 	/********
 	BACK END
 	********/

@@ -108,9 +108,8 @@ $list_post_type = get_web_option('post_type');
     <?php if(strpos($action, 'print-curcuit') !== false): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/cropper.min.css">
 	<?php endif; ?>
-    <?php if($action == 'add-new-order' || $action == 'edit-order'): ?>
-	<link href="<?php echo get_web_url() ?>/views/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
-    <?php endif; ?>
+	
+    <link href="<?php echo get_web_url() ?>/views/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
 
     <?php if($action == 'add-new-user' || $action == 'edit-user'): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/cropper.min.css">
@@ -160,7 +159,7 @@ if(!is_admin() && !is_editor()){ ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-static-top m-b-0">
 			<div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="<?php echo get_web_url() ?>/javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-				<div class="top-left-part"><a class="logo" href="<?php echo get_web_url() ?>"><b><!--This is dark logo icon--><img src="<?php echo get_web_url() ?>/views/plugins/images/eliteadmin-logo.png" alt="home" class="dark-logo" /></b><span class="hidden-xs"><!--This is dark logo text--><img src="<?php echo get_web_url() ?>/views/plugins/images/eliteadmin-text.png" alt="home" class="dark-logo" /></span></a></div>
+				<div class="top-left-part"><a class="logo" href="<?php echo get_web_url() ?>"><b><!--This is dark logo icon--><img src="<?php echo get_web_url() ?>/views/plugins/images/eliteadmin-logo.png" alt="home" class="dark-logo" /></b><span class="hidden-xs text-capitalize"><!--This is dark logo text--><?php echo get_web_title() ?></span></a></div>
 				<ul class="nav navbar-top-links navbar-left hidden-xs">
 					<li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
 					<li class="p-3"></li>

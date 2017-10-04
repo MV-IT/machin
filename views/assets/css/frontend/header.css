@@ -490,3 +490,36 @@ table td, table th{
 .like-news-no-main .main-news  .header-name{
 	font-size: 15px;
 }
+
+.big-news .title{
+	padding: 10px 0;
+	margin-bottom: 0;
+	font-size: 20px;
+	color: #2196f3;
+}
+.seemore{
+    float: right;
+}
+.seemore span{
+	color: #2196f3;
+}
+.main-news{
+	overflow: hidden;
+	font-size: 12px;
+	box-shadow: 1px 1px 5px rgba(255, 255, 255, 1.8);
+	padding: 10px 15px;
+	border: 1px solid #eee;
+}
+
+.main-news + .main-news{
+	border-top: 0;
+}
+
+.main-news:hover{
+	background: #f5f5f5;
+}
+
+.main-news .header-name{
+	font-size: 16px;
+	margin-bottom: 0;
+}

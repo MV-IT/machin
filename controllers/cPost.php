@@ -166,6 +166,17 @@ class cPost
 		$model = new mPost();
 		$post = $model->getPostByUrl($url);
 
+		$post_type_slug = $post['post_type'];
+		$list_post_type = get_web_option('post_type');
+		foreach($list_post_type as $post_type){
+			if($post_type[1] === $post_type_slug){
+				$post_type_title = $post_type[0];
+				break;
+			}
+		}
+
+		$listRandomPosts = $model->getListRandomPosts($post_type_slug);
+
 		$action = 'show-post';
 		$page_title = $post['post_title'];
 		require_once('views/post/show.php');

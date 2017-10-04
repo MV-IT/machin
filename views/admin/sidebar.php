@@ -55,6 +55,7 @@
                     <li><a href="javascript:void(0)" class="waves-effect <?php if(strpos($action, 'setting') !== false) echo 'active'; ?>"><i class="fa fa-cog"></i><span class="hide-menu"> Cài đặt <span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="<?php echo get_web_url() ?>/admin/setting/post-type">Các loại bài đăng</a></li>
+                            <li><a href="<?php echo get_web_url() ?>/admin/setting/general">Thông tin chung</a></li>
                         </ul>
                     </li>
                     <?php } ?>

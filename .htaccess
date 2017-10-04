@@ -10,6 +10,7 @@ RewriteRule ^admin/edit-menu$ index.php?controller=Menu&action=edit
 RewriteRule ^admin/edit-user/([0-9]+)$ index.php?controller=User&action=edit&user_id=$1
 RewriteRule ^admin/setting/post-type$ index.php?controller=Setting&action=postType
 RewriteRule ^admin/setting/index-option$ index.php?controller=Setting&action=indexOption
+RewriteRule ^admin/setting/general$ index.php?controller=Setting&action=generalOption
 
 RewriteRule ^admin/post/([-0-9a-zA-Z]+)/list$ index.php?controller=Post&action=listInAdmin&post_type=$1&%{QUERY_STRING} [NC,L]
 RewriteRule ^admin/post/([-0-9a-zA-Z]+)/add-new$ index.php?controller=Post&action=addNew&post_type=$1
@@ -48,6 +49,9 @@ RewriteRule ^post/([a-zA-z0-9-]+)$ index.php?controller=Post&action=listInFrontE
 RewriteRule ^post/([a-zA-z0-9-]+)/([a-zA-z0-9-]+)$ index.php?controller=Post&action=showPost&post_type=$1&url=$2
 
 RewriteRule ^mach-in/dat-mach$ index.php?controller=Order&action=frontEnd
+
+RewriteRule ^user/profile/([0-9]+)$ index.php?controller=User&action=showProfile&id=$1
+RewriteRule ^user/profile$ index.php?controller=User&action=showProfile&id=
 
 RewriteRule ^san-pham/([-%a-zA-z0-9]+)$ shop/product.php?url=$1
 

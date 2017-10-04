@@ -21,6 +21,7 @@
 	<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 	<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
 	<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/summernote/dist/summernote.min.js"></script>
+	<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/custom-select/custom-select.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function($) {
 			<?php if($action == 'admin-index'){ ?>
@@ -57,6 +58,10 @@
 	<?php if($action == 'theme-edit-menu'){ ?>
 	<script src="<?php echo get_web_url() ?>/views/plugins/bower_components/nestable/jquery.nestable.js"></script>
 	<script type="text/javascript" src="<?php echo get_web_url() ?>/views/assets/js/admin/menu.js"></script>
+	<?php } ?>
+
+	<?php if($action == 'general-setting'){ ?>
+	<script src="<?php echo get_web_url() ?>/views/assets/js/admin/general-option.js"></script>
 	<?php } ?>
 
 	<?php if($action == 'post-type-setting'){ ?>
