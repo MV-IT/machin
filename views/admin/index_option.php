@@ -52,22 +52,37 @@
 								<hr>
 								<?php 
 									$listVideo = get_web_option('index_video');
+									$listPostType = get_web_option('post_type');
+									$curPostType = get_web_option('index_post_type');
 								?>
-								<div class="index-video">
-									<h3 class="box-title">Video Youtbe</h3>
-									<div class="row">
-										<div class="col-sm-6">
-											<div class="video-box">
-												<h4>Video 1:</h4>
-												<label for="video_link_1">Linnk video:</label><input type="url" class="form-control" id="video_link_1" name="videoLink[]" value="<?php echo !empty($listVideo[0]) ? $listVideo[0] : '' ?>">
+								<div class="row">
+									<div class="col-xs-12 col-md-4">
+										<h3 class="box-title">Chọn loại bài đăng hiển thị</h3>
+										<select name="index_post_type" class="form-control">
+											<?php foreach ($listPostType as $key => $post_type){
+											?>
+											<option value="<?php echo $post_type[1] ?>"<?php echo $curPostType == $post_type[1] ? ' selected' : '' ?>><?php echo $post_type[0] ?></option>
+											<?php } ?>
+										</select>
+									</div>
+									<div class="col-xs-12 col-md-8">
+										<div class="index-video">
+										<h3 class="box-title">Video Youtbe</h3>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="video-box">
+													<h4>Video 1:</h4>
+													<label for="video_link_1">Linnk video:</label><input type="url" class="form-control" id="video_link_1" name="videoLink[]" value="<?php echo !empty($listVideo[0]) ? $listVideo[0] : '' ?>">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="video-box">
+													<h4>Video 2:</h4>
+													<label for="video_link_2">Linnk video:</label><input type="url" class="form-control" id="video_link_2" name="videoLink[]" value="<?php echo !empty($listVideo[1]) ? $listVideo[1] : '' ?>">
+												</div>
 											</div>
 										</div>
-										<div class="col-sm-6">
-											<div class="video-box">
-												<h4>Video 2:</h4>
-												<label for="video_link_2">Linnk video:</label><input type="url" class="form-control" id="video_link_2" name="videoLink[]" value="<?php echo !empty($listVideo[1]) ? $listVideo[1] : '' ?>">
-											</div>
-										</div>
+									</div>
 									</div>
 								</div>
 							</div>

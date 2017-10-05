@@ -60,7 +60,9 @@ if(is_user_facebook_logged_in()){
 				<div class="row">
 					<div class="logo col-lg-2 col-md-5">
 						<div class="text-center">
-							<img src="<?php echo get_image_url(get_web_option('web-header-image'), 'theme') ?>" alt="">
+							<a href="<?php echo get_web_url() ?>">
+								<img src="<?php echo get_image_url(get_web_option('web-header-image'), 'theme') ?>" alt="">
+							</a>
 						</div>
 					</div>
 					<div class="col-lg-10 banel col-md-7">

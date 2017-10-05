@@ -87,6 +87,7 @@ class cSetting
 				}
 			}
 			$listOption['index_slider'] = $slider_items;
+			$listOption['index_post_type'] = $_POST['index_post_type'];
 			$listOption['index_video'] = $_POST['videoLink'];
 			$model->updateIndexOption($listOption);
 		}
