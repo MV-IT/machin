@@ -39,7 +39,7 @@ class mSetting extends Database
 		return update_option('post_type', $list_post_type);
 	}
 
-	public function updateIndexOption($listOption){
+	public function updateOption($listOption){
 		foreach ($listOption as $optionName => $optionValue){
 			if(!is_string($optionValue))
 				$optionValue = serialize($optionValue);
@@ -58,17 +58,33 @@ class mSetting extends Database
 		}
 	}
 
+	public function updateIndexOption($listOption)
+	{
+		return $this->updateOption($listOption);
+	}
+
 	public function updateGeneralOption($optionValue)
 	{
-		foreach ($optionValue as $key => $option) {
-			if(!empty($option)){
-				if($this->getNumRows("SELECT * FROM options WHERE option_name = '$key'") > 0)
-					$status = $this->update('options', array('option_value' => $option, 'option_name' => $key), "option_name = '$key'") ? true : false;
-				else
-					$status = $this->insert('options', array('option_value' => $option, 'option_name' => $key)) ? true : false;
+		return $this->updateOption($optionValue);
+	}
+
+	public function updateHeaderOption($listOption)
+	{
+		foreach ($_FILES as $key => $file) {
+			if(!empty($file['name'])){
+				$fileName = save_file_upload($file, 'theme');
+				if(get_web_option("$key") !== false){
+					delete_file(get_web_option($key), 'theme');
+					if(!$this->update('options', array('option_value' => $fileName), "option_name = $key"))
+						die($key);
+				}
+				else{
+					$this->insert('options', array('option_name' => $key, 'option_value' => $fileName));
+				}
 			}
 		}
-		return $status;
+
+		return $this->updateOption($listOption);
 	}
 }
 

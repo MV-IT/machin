@@ -48,6 +48,8 @@
                     <li><a href="javascript:void(0)" class="waves-effect <?php if(strpos($action, 'theme') !== false) echo 'active'; ?>"><i class="ti-palette"></i><span class="hide-menu"> Giao diện <span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="<?php echo get_web_url() ?>/admin/edit-menu">Menu</a></li>
+                            <li><a href="<?php echo get_web_url() ?>/admin/setting/theme-header">Đầu trang</a></li>
+                            <li><a href="<?php echo get_web_url() ?>/admin/setting/theme-footer">Chân trang</a></li>
                             <li><a href="<?php echo get_web_url() ?>/admin/setting/index-option">Trang chủ</a></li>
                         </ul>
                     </li>

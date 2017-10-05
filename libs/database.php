@@ -22,6 +22,10 @@ class Database
 		$this->name = !empty($name) ? $name : db_name;
 		$this->connect_error = false;
 	}
+	public function getConn()
+	{
+		return $this->__conn;
+	}
 	// Hàm Kết Nối
 	function connect()
 	{

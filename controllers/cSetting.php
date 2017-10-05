@@ -128,6 +128,27 @@ class cSetting
 		$page_title = 'Thông tin chung';
 		require 'views/admin/setting/general.php';
 	}
+
+	public function themeHeaderOption()
+	{
+		if(isset($_POST['save-header-option']) && $_POST['key_update'] == $_SESSION['key_update']){
+			require 'models/mSetting.php';
+			$model = new mSetting();
+
+			$listOption['web-header-title'] = $_POST['header-title'];
+			$listOption['web-header-description'] = $_POST['header-description'];
+			$listOption['web-header-phone'] = $_POST['header-phone'];
+			$listOption['web-header-email'] = $_POST['header-email'];
+
+			if($model->updateHeaderOption($listOption, $_FILES))
+				header('location: '.current_url());
+		}
+		$rand_key = rand_key();
+		$_SESSION['key_update'] = $rand_key;
+		$action = 'theme-header-option';
+		$page_title = 'Chỉnh sửa đầu trang giao diện';
+		require 'views/admin/setting/theme-header.php';
+	}
 }
 
 ?>

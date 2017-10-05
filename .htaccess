@@ -11,6 +11,8 @@ RewriteRule ^admin/edit-user/([0-9]+)$ index.php?controller=User&action=edit&use
 RewriteRule ^admin/setting/post-type$ index.php?controller=Setting&action=postType
 RewriteRule ^admin/setting/index-option$ index.php?controller=Setting&action=indexOption
 RewriteRule ^admin/setting/general$ index.php?controller=Setting&action=generalOption
+RewriteRule ^admin/setting/theme-header$ index.php?controller=Setting&action=themeHeaderOption
+RewriteRule ^admin/setting/theme-footer$ index.php?controller=Setting&action=themeFooterOption
 
 RewriteRule ^admin/post/([-0-9a-zA-Z]+)/list$ index.php?controller=Post&action=listInAdmin&post_type=$1&%{QUERY_STRING} [NC,L]
 RewriteRule ^admin/post/([-0-9a-zA-Z]+)/add-new$ index.php?controller=Post&action=addNew&post_type=$1

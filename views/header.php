@@ -24,7 +24,7 @@ if(is_user_facebook_logged_in()){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $page_title ?> | <?php echo get_web_title() ?></title>
-
+	<link rel="icon" href="<?php echo get_image_url(get_web_option('web-fav-image'), 'theme') ?>">
 	<?php if($action == 'index_frontend'): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/index.css">
 	<?php endif; ?>
@@ -60,7 +60,7 @@ if(is_user_facebook_logged_in()){
 				<div class="row">
 					<div class="logo col-lg-2 col-md-5">
 						<div class="text-center">
-							<img src="<?php echo get_web_option('web-logo') ?>" alt="">
+							<img src="<?php echo get_image_url(get_web_option('web-header-image'), 'theme') ?>" alt="">
 						</div>
 					</div>
 					<div class="col-lg-10 banel col-md-7">

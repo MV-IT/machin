@@ -77,7 +77,6 @@ function save_file_upload($file, $folder = ''){
 	$path .= $name;
 	if(file_exists($path)){
 		$file_path = pathinfo( $name, PATHINFO_EXTENSION );
-		delete_file($name, $folder);
 		$name = rand_key(12).'.'.$file_path;
 		$path = $path_old.$name;
 	}
@@ -108,7 +107,7 @@ function save_file_from_data_url($data, $folder = ''){
 
 function get_image_url($file_name, $folder){
 	$folder = !empty($folder) ? $folder.'/' : '';
-	return '/images/'.$folder.$file_name; 
+	return get_web_url().'/images/'.$folder.$file_name; 
 }
 
 function delete_file($file_name, $folder = ''){
