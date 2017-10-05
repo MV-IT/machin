@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2017 at 07:09 PM
+-- Generation Time: Oct 05, 2017 at 03:00 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -70,7 +70,15 @@ INSERT INTO `options` (`ID`, `option_name`, `option_value`) VALUES
 (30, 'web-email', 'phammanh.1221998@gmail.com'),
 (31, 'post_type', 'a:2:{i:0;a:2:{i:0;s:9:\"Tin tức\";i:1;s:7:\"tin-tuc\";}i:1;a:2:{i:0;s:5:\"Trang\";i:1;s:5:\"trang\";}}'),
 (32, 'index_slider', 'a:2:{i:0;a:2:{s:4:\"link\";s:17:\"http://google.com\";s:3:\"src\";s:85:\"https://www.google.com.vn/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png\";}i:1;a:2:{s:4:\"link\";s:13:\"http://fb.com\";s:3:\"src\";s:147:\"https://scontent.fhan2-1.fna.fbcdn.net/v/t31.0-8/19944485_503084846697045_8607685521166699811_o.png?oh=e3b2ce507a64dc5aee19390c8b26c3c6&oe=5A0F7BBA\";}}'),
-(33, 'index_video', 'a:2:{i:0;s:41:\"https://www.youtube.com/embed/AmvA-XJF0j8\";i:1;s:41:\"https://www.youtube.com/embed/z5Jc7KiTLbs\";}');
+(33, 'index_video', 'a:2:{i:0;s:41:\"https://www.youtube.com/embed/AmvA-XJF0j8\";i:1;s:41:\"https://www.youtube.com/embed/z5Jc7KiTLbs\";}'),
+(34, 'web-phone', '0968864783'),
+(35, 'web-address', '10b/Ngõ 55/Chính Kinh/Thanh Xuân/Hà Nội'),
+(36, 'web-header-title', ''),
+(37, 'web-header-description', ''),
+(38, 'web-header-phone', ''),
+(39, 'web-header-email', ''),
+(40, 'web-fav-image', '4Ov4qfTVaNtQ.png'),
+(41, 'web-header-image', 'cropped-logo-mhg-e1475654836859-300x236.png');
 
 -- --------------------------------------------------------
 
@@ -101,7 +109,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`ID`, `customer_name`, `customer_phone`, `customer_email`, `address`, `receive_after`, `accept_time`, `will_receive_time`, `receive_time`, `total_cost`, `status`, `ship_to_home`, `code`, `view_code`, `user`) VALUES
-(4, 'Phạm Văn Mạnh', '968864783', 'phammanh.1221998@gmail.com', '10b/Ngõ 55/Chính Kinh/Thanh Xuân/Hà Nội', 5, '', '', '', 540000, '0', 'yes', 'Bt0m3t', 'hi2ijD', 0);
+(4, 'Phạm Văn Mạnh', '968864783', 'phammanh.1221998@gmail.com', '10b/Ngõ 55/Chính Kinh/Thanh Xuân/Hà Nội', 5, '', '', '', 540000, '0', 'yes', 'Bt0m3t', 'hi2ijD', 0),
+(6, 'Phạm Văn Mạnh', '968864783', 'phammanh.1221998@gmail.com', '10b/Ngõ 55/Chính Kinh/Thanh Xuân/Hà Nội', 2, '', '', '', 540000, '0', 'yes', 'Ec8gHj', 'guecZj', 0);
 
 -- --------------------------------------------------------
 
@@ -121,7 +130,8 @@ CREATE TABLE `order_print_curcuits` (
 --
 
 INSERT INTO `order_print_curcuits` (`print_curcuit_id`, `order_id`, `number`, `cost`) VALUES
-(25, 4, 2, 540000);
+(25, 4, 2, 540000),
+(29, 6, 1, 540000);
 
 -- --------------------------------------------------------
 
@@ -190,8 +200,10 @@ CREATE TABLE `print_curcuit` (
 
 INSERT INTO `print_curcuit` (`ID`, `name`, `type`, `url`, `feature_image`, `featured`) VALUES
 (25, 'Mạch in OWG4RRVQ31', 'Order', 'mach-in-owg4rrvq31', '', 0),
-(26, 'Test Print Curcuit', 'Mẫu', 'test-print-curcuit', '/images/print-curcuit/gXG3DXPkYltA.png', 1),
-(27, 'Test Print Curcuit 2', 'Mẫu', 'test-print-curcuit-2', '/images/print-curcuit/uBr5dJiwPJtN.png', 1);
+(26, 'Test Print Curcuit', 'Mẫu', 'test-print-curcuit', '/images/print-curcuit/KwrYpgmQ5nej.png', 1),
+(27, 'Test Print Curcuit 2', 'Mẫu', 'test-print-curcuit-2', '/images/print-curcuit/uBr5dJiwPJtN.png', 1),
+(29, 'Mạch in T1GMGNIKOS', 'Order', 'mach-in-t1gmgnikos', '/images/print-curcuit/default.png', 0),
+(30, '', 'Mẫu', '', '/images/print-curcuit/cIEIGaHDawmY.png', 1);
 
 -- --------------------------------------------------------
 
@@ -219,7 +231,13 @@ INSERT INTO `print_curcuit_properties` (`ID`, `property`, `print_curcuit`, `valu
 (79, 7, 26, 25),
 (80, 5, 27, 20),
 (81, 6, 27, 22),
-(82, 7, 27, 25);
+(82, 7, 27, 25),
+(86, 5, 29, 20),
+(87, 6, 29, 21),
+(88, 7, 29, 25),
+(89, 5, 30, 19),
+(90, 6, 30, 21),
+(91, 7, 30, 24);
 
 -- --------------------------------------------------------
 
@@ -1226,12 +1244,12 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `options`
 --
 ALTER TABLE `options`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `posts`
 --
@@ -1246,12 +1264,12 @@ ALTER TABLE `post_terms`
 -- AUTO_INCREMENT for table `print_curcuit`
 --
 ALTER TABLE `print_curcuit`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `print_curcuit_properties`
 --
 ALTER TABLE `print_curcuit_properties`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 --
 -- AUTO_INCREMENT for table `property`
 --

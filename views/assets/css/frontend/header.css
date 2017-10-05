@@ -84,7 +84,6 @@ table td, table th{
 	font-size: 18px;
 }
 .logo_and_contact .banel .contact {
-	padding-left: 60px;
 	padding-top: 5px;
 	font-size: 14px;
 }
@@ -176,7 +175,7 @@ table td, table th{
 }
 
 .menu .form-inline button i{
-	color: #404040;
+	color: #fff;
 }
 .menu .form-inline button{
 	border-color: #eee !important;

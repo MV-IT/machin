@@ -66,13 +66,12 @@ if(is_user_facebook_logged_in()){
 					<div class="col-lg-10 banel col-md-7">
 						<div class="row">
 							<div class="bazon col-lg-8 col-md-12">
-								<h4>Xưởng Sản Xuất Minh Hà Group</h4>
-								<span class="text-center">nơi đẳng cấp ngự trị</span>
+								<h4><?php echo !empty(get_web_option('web-header-title')) ? get_web_option('web-header-title') : get_web_title() ?></h4>
+								<span class="text-center"><?php echo !empty(get_web_option('web-header-description')) ? get_web_option('web-header-description') : get_web_description() ?></span>
 							</div>
-							<div class="contact col-lg-4">
-								<p>Hỗ trợ kinh doanh : 01234756981</p>
-								<p>Hỗ trợ kĩ thuật: 01235647894</p>
-								<p>minhha@gmail.com</p>
+							<div class="contact d-none d-lg-block col-lg-4">
+								<p>Điện thoại: <?php echo !empty(get_web_option('web-header-phone')) ? get_web_option('web-header-phone') : get_web_option('web-phone') ?></p>
+								<p>Email: <?php echo !empty(get_web_option('web-header-email')) ? get_web_option('web-header-email') : get_web_option('web-email') ?></p>
 							</div>
 						</div>
 					</div>

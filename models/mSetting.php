@@ -75,8 +75,8 @@ class mSetting extends Database
 				$fileName = save_file_upload($file, 'theme');
 				if(get_web_option("$key") !== false){
 					delete_file(get_web_option($key), 'theme');
-					if(!$this->update('options', array('option_value' => $fileName), "option_name = $key"))
-						die($key);
+					if(!$this->update('options', array('option_value' => $fileName), "option_name = '$key'"))
+						die(mysqli_error($this->getConn()));
 				}
 				else{
 					$this->insert('options', array('option_name' => $key, 'option_value' => $fileName));
