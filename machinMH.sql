@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2017 at 03:00 PM
+-- Generation Time: Oct 05, 2017 at 05:15 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -78,7 +78,8 @@ INSERT INTO `options` (`ID`, `option_name`, `option_value`) VALUES
 (38, 'web-header-phone', ''),
 (39, 'web-header-email', ''),
 (40, 'web-fav-image', '4Ov4qfTVaNtQ.png'),
-(41, 'web-header-image', 'cropped-logo-mhg-e1475654836859-300x236.png');
+(41, 'web-header-image', 'cropped-logo-mhg-e1475654836859-300x236.png'),
+(42, 'index_post_type', 'tin-tuc');
 
 -- --------------------------------------------------------
 
@@ -1244,7 +1245,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `options`
 --
 ALTER TABLE `options`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `orders`
 --
