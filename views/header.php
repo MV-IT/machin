@@ -37,6 +37,11 @@ if(is_user_facebook_logged_in()){
 	<?php if($action == 'list-post'): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/list-post.css">
 	<?php endif; ?>
+
+	<?php if($action == 'user-profile'): ?>
+	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/profile.css">
+	<?php endif; ?>
+
 	<?php if($action == 'show-post'): ?>
 	<link rel="stylesheet" href="<?php echo get_web_url() ?>/views/assets/css/frontend/show.css">
 	<?php endif; ?>
