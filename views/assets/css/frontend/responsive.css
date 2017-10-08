@@ -8,6 +8,7 @@
 	.contant .product-highlights .item-pro .name{
 		font-size: 14px;
 	}
+
 }
 @media screen and (max-width: 992px){
 	.logo_and_contact .banel .contact{
@@ -18,6 +19,13 @@
 	}
 	.contant .silde-bar .loged .info-loged h4{
 		font-size: 18px;
+	}
+	/*trang profile*/
+	.img-profile{
+		max-height: 250px;
+	}
+	.title-info, .content-info{
+		margin-bottom: 10px;
 	}
 }
 @media screen and (max-width: 767px)
@@ -112,6 +120,25 @@
 	.menu .form-inline button i{
 		color: #404040;
 	}
+	/*trang profile*/
+	.img-profile {
+		
+	}
+	.col-content{
+		padding: 0 15px !important;
+	}
+	.group{
+		padding: 0 !important;
+	}
+	.profile-person {
+		padding-top: 15px;
+	}
+	.box-title{
+		padding-left: 5px !important;
+	}
+	.title-info, .content-info{
+		margin-bottom: 15px;
+	}
 }
 @media screen and (min-width: 768px){
 	.item-menu:hover .sub-list-menu_1, .sub-item-menu_1:hover .sub-list-menu_n{
@@ -120,4 +147,5 @@
 	.news-no-main, .silde-bar{
 		padding-left: 0;
 	}
+
 }
